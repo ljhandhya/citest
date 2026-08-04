@@ -34,6 +34,7 @@ public final class LjhTest {
             if (!client.healthCheck()) {
                 throw new IllegalStateException("Twinkle 服务健康检查失败");
             }
+            //测试一下修改 java 的文件触发的 ci
 
             var capabilities = client.serverCapabilities();
             System.out.println("服务支持的模型：");
