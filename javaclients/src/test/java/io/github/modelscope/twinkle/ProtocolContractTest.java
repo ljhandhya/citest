@@ -25,7 +25,7 @@ class ProtocolContractTest {
                     .existingSessionId("session-1")
                     .build()
             ) {
-                server.enqueue(new MockResponse().setBody("{}"));
+                server.enqueue(new MockResponse().setBody("{\"supported_models\":[]}"));
                 client.serverCapabilities();
                 assertEquals(
                     "/api/v1/twinkle/get_server_capabilities",
