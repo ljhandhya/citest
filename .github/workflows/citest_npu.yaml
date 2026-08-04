@@ -3,6 +3,7 @@ name: citest-npu
 on:
   push:
     branches:
+      - main
       - master
       - "release/**"
     paths-ignore:
@@ -17,6 +18,8 @@ on:
       - "NOTICE"
       - ".github/workflows/lint.yaml"
       - ".github/workflows/publish.yaml"
+      - "javaclients/**"
+      - ".github/workflows/java-ci.yaml"
 
   pull_request:
     paths-ignore:
@@ -31,6 +34,8 @@ on:
       - "NOTICE"
       - ".github/workflows/lint.yaml"
       - ".github/workflows/publish.yaml"
+      - "javaclients/**"
+      - ".github/workflows/java-ci.yaml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

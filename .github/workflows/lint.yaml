@@ -1,6 +1,14 @@
 name: Lint test
 
-on: [push, pull_request]
+on:
+  push:
+    paths-ignore:
+      - "javaclients/**"
+      - ".github/workflows/java-ci.yaml"
+  pull_request:
+    paths-ignore:
+      - "javaclients/**"
+      - ".github/workflows/java-ci.yaml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
