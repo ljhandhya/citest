@@ -13,7 +13,7 @@ from twinkle_client.types.training import (Checkpoint, Cursor, ParsedCheckpointT
 from .http import get_api_key, get_base_url, http_delete, http_get, http_post, set_api_key, set_base_url, set_session_id
 
 logger = get_logger()
-
+#修改一下python代码测试
 class TwinkleClientError(Exception):
     """Base exception for TwinkleManager errors."""
     pass
