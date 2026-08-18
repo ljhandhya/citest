@@ -148,6 +148,7 @@ megatron_output/
 .qoder
 .kiro/
 .claude/
+.worktrees/
 
 # Pytorch
 *.pth
